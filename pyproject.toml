@@ -1,0 +1,23 @@
+[project]
+name = "vllm-ascend-dev"
+version = "0.1.0"
+dependencies = [
+    "vllm==0.7.3",
+    "rouge",
+    "fuzzywuzzy",
+    "jieba",
+    "rouge_score",
+    "transformers",
+    "huggingface-hub",
+    "python-levenshtein>=0.27.1",
+    "setuptools<81",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vllm*"]
+exclude = ["data", "tests", "docs", "scripts"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
